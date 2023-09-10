@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "codeceptjs": "rm -rf ./output/* && codeceptjs run --steps",
-        "codeceptjs:headless": "HEADLESS=true codeceptjs run --steps",
+        "codeceptjs:headless": "HEADLESS=true rm -rf ./output/* && codeceptjs run --steps",
         "codeceptjs:ui": "codecept-ui --app"
     },
     "devDependencies": {
