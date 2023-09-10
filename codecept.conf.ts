@@ -7,7 +7,7 @@ setHeadlessWhen(process.env.HEADLESS);
 setCommonPlugins();
 
 export const config: CodeceptJS.MainConfig = {
-  tests: './tests/search.test.ts',
+  tests: './tests/*.test.ts',
   output: './output',
   helpers: {
     Playwright: {
@@ -22,7 +22,7 @@ export const config: CodeceptJS.MainConfig = {
   },
   include: {
     Amazon: "./pages/amazon.ts",
-    Data: "./TestData.ts"
+    Data: "./data/TestData.ts"
   },
   name: 'wintex',
   plugins: {

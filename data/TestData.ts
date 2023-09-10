@@ -1,4 +1,4 @@
-export { default as USERS } from './data/users.json';
+export { default as USERS } from './users.json';
 
 export const CONST = {
     WAIT: {

@@ -1,6 +1,6 @@
 /// <reference types='codeceptjs' />
 type amazon = typeof import('./pages/amazon');
-type data = typeof import('./TestData');
+type data = typeof import('./data/TestData');
 type ChaiWrapper = import('codeceptjs-chai')
 
 declare namespace CodeceptJS {
