@@ -22,6 +22,7 @@ export default class HomePage {
   }
 
   clickLogin = () => {
+    //wait to input captcha manually (if any)
     I.waitForElement(this.buttons.login, Data.CONST.WAIT.MEDIUM);
     I.click(this.buttons.login);
     return this;

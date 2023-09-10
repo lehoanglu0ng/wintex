@@ -38,6 +38,7 @@ export default class SearchResultPage {
     return this;
   }
 
+  //get every date of search result items then verify that they are displayd newest one first
   verifyPublicationDateSort = async () => {
     let dates = await I.grabTextFromAll(this.result.dates);
     I.say(dates.toString());
