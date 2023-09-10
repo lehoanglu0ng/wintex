@@ -15,6 +15,7 @@ export const config: CodeceptJS.MainConfig = {
       browser: 'chromium',
       url: 'https://www.amazon.com',
       show: true,
+      windowSize: '1920x1080'
     },
     chaiWrapper: {
       require: "codeceptjs-chai"
