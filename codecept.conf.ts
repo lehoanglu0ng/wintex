@@ -11,7 +11,7 @@ export const config: CodeceptJS.MainConfig = {
   output: './output',
   helpers: {
     Playwright: {
-      waitForAction: 1000,
+      waitForAction: 500,
       browser: 'chromium',
       url: 'https://www.amazon.com',
       show: true,

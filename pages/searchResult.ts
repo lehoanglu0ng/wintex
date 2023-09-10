@@ -22,6 +22,7 @@ export default class SearchResultPage {
   // actions
   filterLanguage = (language: string) => {
     I.click(this.checkboxs.language(language));
+    I.wait(Data.CONST.WAIT.ANIMATION)
     I.dontSeeElement(this.spinner);
     return this;
   }
@@ -34,6 +35,7 @@ export default class SearchResultPage {
 
   sortSelect = (type: string) => {
     I.selectOption(this.sort, type);
+    I.wait(Data.CONST.WAIT.ANIMATION)
     I.dontSeeElement(this.spinner);
     return this;
   }
