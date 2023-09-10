@@ -14,4 +14,5 @@ Scenario('Verify functionality of login with invalid password', ({ Amazon, Data 
 
 Scenario('Verify user can login to amazon with a valid account', ({ Amazon, Data }) => {
     Amazon.loginPage.loginValid(Data.USERS.chip);
+    Amazon.homePage.amOnHomePage(Data.USERS.chip);
 });

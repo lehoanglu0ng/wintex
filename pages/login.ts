@@ -14,7 +14,6 @@ export default class LoginPage {
     signIn: '#signInSubmit'
   }
   labels = {
-    welcome: (name: string) => { return locate('#nav-link-accountList-nav-line-1').withText(`Hello, ${name}`) },
     error: '#auth-error-message-box .a-alert-content'
   }
 
@@ -25,7 +24,6 @@ export default class LoginPage {
     I.click(this.buttons.continue);
     I.fillField(this.fields.password, secret(user.password))
     I.click(this.buttons.signIn);
-    I.waitForVisible(this.labels.welcome(user.name), Data.CONST.WAIT.LONG)
   }
 
   loginInvalidEmail = (email: string) => {

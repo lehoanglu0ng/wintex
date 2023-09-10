@@ -3,6 +3,7 @@ Feature('Search');
 Before(({ Amazon, Data }) => {
     Amazon.homePage.openHomePage().clickLogin();
     Amazon.loginPage.loginValid(Data.USERS.chip);
+    Amazon.homePage.amOnHomePage(Data.USERS.chip);
 })
 
 Scenario('Verify result list is paginated if there are more than 16 items', ({ Amazon }) => {

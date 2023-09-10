@@ -1,3 +1,4 @@
+import { Credential } from "../types";
 const { I, Data } = inject();
 
 export default class HomePage {
@@ -14,10 +15,19 @@ export default class HomePage {
     searchBox: '#twotabsearchtextbox'
   }
 
+  labels = {
+    welcome: (name: string) => { return locate('#nav-link-accountList-nav-line-1').withText(`Hello, ${name}`) }
+  }
+
 
   // actions
   openHomePage = () => {
     I.amOnPage('/');
+    return this;
+  }
+
+  amOnHomePage = (user: Credential) => {
+    I.waitForVisible(this.labels.welcome(user.name), Data.CONST.WAIT.LONG)
     return this;
   }
 

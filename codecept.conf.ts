@@ -22,17 +22,15 @@ export const config: CodeceptJS.MainConfig = {
     }
   },
   include: {
+    I: "./sharedSteps",
     Amazon: "./pages/amazon.ts",
-    Data: "./data/TestData.ts"
+    Data: "./data/TestData.ts",
   },
   name: 'wintex',
   plugins: {
     allure: {
       enabled: true,
       require: '@codeceptjs/allure-legacy',
-    },
-    chaiWrapper: {
-      require: "codeceptjs-chai"
     }
   }
 }
