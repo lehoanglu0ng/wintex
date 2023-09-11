@@ -14,6 +14,12 @@ npm ci
 npm install -g allure-commandline --save-dev
 ```
 
+## Execute tests with detailed steps
+
+```bash
+npm run codeceptjs
+```
+
 ## Execute tests headless with detailed steps
 
 ```bash
